@@ -1,10 +1,43 @@
 <?php
 
-function rekursif($i){
-  echo "$i <br>";
-  $i--;
-  if($i>0)
-    rekursif($i);
+$i = 5;
+
+function rekursif($j, $k){
+  if($j>0){
+    if ($k>0) {
+      echo ("* ");
+       $k--;
+       rekursif($j, $k);
+    }else {
+      echo ("<br>");
+      $j--;
+      rekursif($j, $j);
+    }
+  }
 }
-rekursif(5);
-?>
+
+rekursif($i, $i);
+
+// =============================
+
+$c = 5;
+
+function angka($h, $b){
+  if($h>0){
+    if ($b>0) {
+      echo ("$h");
+       $b--;
+       rekursif($h, $b);
+    }else {
+      echo ("<br>");
+      $h--;
+      rekursif($h, $h);
+    }
+  }
+}
+
+rekursif($c, $c);
+
+
+
+ ?>
